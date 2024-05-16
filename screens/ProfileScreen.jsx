@@ -1,10 +1,14 @@
 import { StyleSheet, Text, View, Button, SafeAreaView } from 'react-native'
 import React from 'react'
+import { signOut } from 'firebase/auth'
+import { auth } from '../firebase'
 
 const ProfileScreen = () => {
 
     // TODO: handle logout
-    const handleLogout = () => {}
+    const handleLogout = () => {
+        signOut(auth)
+    }
 
     return (
         <SafeAreaView>
